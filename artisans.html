@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisans & Makers Content — ContentForge Portfolio</title>
+  <meta name="description" content="Real content samples for artisans, makers, and independent creators. Written by ContentForge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f11; --surface: #151820; --surface2: #1c2029; --border: #252a36;
+      --text: #e8eaf0; --text-muted: #8892a4;
+      --accent: #f5a623; --accent-dim: rgba(245,166,35,0.12);
+      --artisan: #c9a03e; --artisan-dim: rgba(201,160,62,0.12);
+      --radius: 12px; --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 28px 0; border-bottom: 1px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+    .logo span { color: var(--accent); }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--text-muted); font-size: 15px; font-weight: 500; transition: color 0.15s; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .page-hero { padding: 80px 0 60px; }
+    .page-hero .niche-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--artisan-dim); color: var(--artisan);
+      font-family: var(--mono); font-size: 13px; font-weight: 500;
+      padding: 8px 16px; border-radius: 20px; margin-bottom: 20px;
+    }
+    .page-hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 20px; }
+    .page-hero p { font-size: 18px; color: var(--text-muted); max-width: 560px; line-height: 1.6; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 60px 0; }
+
+    .article { margin-bottom: 80px; }
+    .article-header { margin-bottom: 32px; }
+    .article-tag { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--artisan); margin-bottom: 12px; }
+    .article h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 16px; }
+    .article-excerpt { font-size: 18px; color: var(--text-muted); line-height: 1.65; border-left: 3px solid var(--artisan); padding-left: 20px; }
+    .article-meta { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+    .meta-chip { font-family: var(--mono); font-size: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; }
+
+    .article-body { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px; }
+    .article-body p { color: #c4c9d6; margin-bottom: 20px; font-size: 17px; }
+    .article-body h3 { font-size: 18px; font-weight: 600; color: var(--text); margin-top: 36px; margin-bottom: 14px; }
+    .article-body h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-top: 40px; margin-bottom: 16px; }
+    .article-body ul, .article-body ol { color: #c4c9d6; margin-bottom: 20px; padding-left: 28px; font-size: 17px; }
+    .article-body li { margin-bottom: 10px; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body blockquote { border-left: 3px solid var(--artisan); padding: 16px 24px; margin: 24px 0; background: var(--artisan-dim); border-radius: 0 8px 8px 0; font-style: italic; color: var(--text); }
+    .article-body hr { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+    .article-body em { font-style: italic; color: var(--text); }
+    .article-body a { color: var(--accent); }
+    .article-body a:hover { text-decoration: underline; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 80px; }
+
+    @media (max-width: 640px) {
+      nav { gap: 16px; }
+      nav a { font-size: 14px; }
+      .page-hero { padding: 50px 0 40px; }
+      .article-body { padding: 28px 24px; }
+    }
+    @media (max-width: 400px) { nav { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">Content<span>Forge</span></div>
+    <nav>
+      <a href="index.html">All Niches</a>
+      <a href="pet-services.html">Pet Services</a>
+      <a href="wedding-vendors.html">Wedding</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="niche-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Artisans & Makers
+      </div>
+      <h1>Content for Artisans & Makers</h1>
+      <p>Blog posts and guides for bakers, ceramists, jewellers, and independent creators. The kind of content that builds a brand and turns followers into buyers.</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Article 1 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>Turning Instagram Followers Into Customers: A No-BS Guide for Makers</h2>
+        <p class="article-excerpt">The link-in-bio problem, Stories vs Posts for sales, and how to actually price handmade for an Instagram audience — a practical guide for makers who are tired of vanity metrics.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Instagram</span>
+          <span class="meta-chip">Social Sales</span>
+          <span class="meta-chip">~800 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Your Instagram has 1,800 followers. Your last sale from Instagram was three months ago. You're not alone. Most makers treat Instagram like a portfolio and wonder why it doesn't pay the bills. Here's how to actually convert followers into customers.</p>
+
+        <h3>The Link-in-Bio Problem</h3>
+        <p>The link-in-bio is the single biggest bottleneck for makers on Instagram. You've got one URL and probably a Linktree with twelve options. Your follower clicks through to find your shop, gets lost in a landing page, and bounces.</p>
+        <p>Fix it: Have exactly one destination. Not your Linktree, not your homepage, not your entire Etsy shop. One product. Your best seller, your newest release, or your easiest entry point (usually a subscription or a lower-priced item). Change this link every two weeks. When someone asks about your prices in a DM, you send them to that specific link, not your homepage.</p>
+        <p>If you use Linktree, pick one link and make it the obvious choice. Remove everything else from Linktree or don't use Linktree at all.</p>
+
+        <h3>Stories Sell. Posts Build Trust. Reels Get Discovery.</h3>
+        <p>Makers waste effort on the wrong format. Here's what actually works:</p>
+        <p><strong>Reels</strong> are for discovery — getting in front of people who don't follow you yet. Post one or two reels a week showing your process. Your hands shaping dough, the kiln being loaded, the leather being cut. This is not content for your existing followers. It's content for the algorithm to put in front of strangers.</p>
+        <p><strong>Stories</strong> are for selling. Use the poll or question sticker to ask your audience what they want. Do a countdown for a new product launch. Every Story that includes a "link in bio" reminder is a soft sales prompt. Post Stories three to five times a week minimum if you want to move product.</p>
+        <p><strong>Posts</strong> are for building the human connection that turns a one-time buyer into a repeat customer. Show your face. Show your workspace. Show why you do this. A carousel of your process with a caption that sounds like you (not a marketing department) will outperform a perfectly staged flat lay every time.</p>
+
+        <h3>Pricing for an Instagram Audience</h3>
+        <p>Here's where most makers stumble: they price for their own costs instead of their customer's perceived value.</p>
+        <p>A ceramicist spending eight hours on a vase shouldn't price based on eight hours times minimum wage. She should price based on what a buyer who discovered her on Instagram is willing to pay for a handmade object that fits their aesthetic. That's a different number — usually higher, sometimes significantly.</p>
+        <p>The practical rule: price at 3x your cost of materials and time at a baseline. If you're selling through Instagram and handling fulfilment yourself, 4x is more honest. If you're offering custom or commissioned pieces, price for the design work, not just the material cost.</p>
+        <p>Don't apologise for your prices in captions. "I know it's pricey but..." kills desire. If someone asks in the comments if your bread is worth the price, don't answer the question. Show the process that explains the price.</p>
+
+        <h3>The DM Is a Sale. Treat It Like One.</h3>
+        <p>When someone DMs you to ask about a product, that's not a casual enquiry. That's a warm lead. Respond within two hours. Have a ready answer for common questions: price, size, custom options, shipping. Don't send them to your link and leave it there. Say something like: "Yes, I have the small bowl in stock — I'll send you the direct link to buy now so you don't lose it."</p>
+        <p>If someone asks about a product you don't have, that's an opportunity. "I don't have that right now but I'm taking a short waitlist — want me to message you when it's back?" You're building a list inside Instagram DMs that you own.</p>
+
+        <h3>The Minimum Viable Instagram Sales System</h3>
+        <p>If you're starting from zero and want something that actually works:</p>
+        <ol>
+          <li>Post a process reel twice a week (discovery)</li>
+          <li>Post a personal post or carousel once a week (trust)</li>
+          <li>Post Stories five times a week (selling)</li>
+          <li>Change your link-in-bio every two weeks to your current best seller or newest piece</li>
+          <li>Reply to every DM within two hours during your advertised hours</li>
+          <li>Track every sale that comes from Instagram with a named discount code so you know what's working</li>
+        </ol>
+        <p>That's it. No hashtag strategy beyond using ten relevant ones once and leaving them. No engagement pods. No bot activity. Just consistent content that shows your face, your process, and your product.</p>
+        <hr>
+        <p><em>If you'd rather spend your hours at the bench than wrestling with content calendars, ContentForge helps makers build simple, effective Instagram strategies that actually convert followers into buyers — without the vanity metrics.</em></p>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Article 2 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>The Photography Mistakes That Are Costing Your Handmade Business Sales</h2>
+        <p class="article-excerpt">Six specific photography errors that tank conversions on handmade product pages — and the exact fixes to turn your images into sales tools.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Product Photography</span>
+          <span class="meta-chip">Sales</span>
+          <span class="meta-chip">~750 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Your product is brilliant. Your customers can't tell from your photos.</p>
+        <p>That's the silent conversion killer for most makers selling online. Bad product photography doesn't just look unprofessional — it actively costs you sales because buyers can't evaluate what they're buying. Here's what's going wrong and how to fix it.</p>
+
+        <h3>Mistake 1: Shooting in Overhead Kitchen Light</h3>
+        <p>This is the most common mistake bakers, ceramists, and cooks make. You shoot your sourdough or your ceramic mug on the kitchen counter under a ceiling light or just daylight from a small window. The result: a flat, yellowish image with harsh shadows on one side and a dead zone on the other.</p>
+        <p>Fix: Move your product next to a window. Shoot in the two hours after sunrise or before sunset when light is softer. If you only have harsh midday light, diffuse it with a white bedsheet or a piece of tracing paper between the window and your product. Your crust will look golden instead of grey. Your glaze will show its actual colour instead of appearing washed out.</p>
+
+        <h3>Mistake 2: Not Showing Scale</h3>
+        <p>A loaf of bread photographed alone looks like a prop. A ceramic bowl photographed without context looks like a generic homewares stock image. Buyers can't evaluate size from abstract shots.</p>
+        <p>Fix: Include something that tells the scale immediately. A teaspoon next to a jar of preserves. A hand holding a pottery mug. A coin or a standard-sized object does the job faster than any measurement in words.</p>
+
+        <h3>Mistake 3: Busy Backgrounds</h3>
+        <p>You set your handmade leather wallet on the kitchen table beside a coffee mug, some keys, a stack of mail, and a half-read newspaper. The wallet is technically in focus but it's competing with everything else in the frame.</p>
+        <p>Fix: Pick one background and commit to it. A clean wooden surface, a linen cloth, a plain concrete slab. The product is the subject. Everything else is noise. If you can't clear the table, move to the floor and shoot from above on a clean surface.</p>
+
+        <h3>Mistake 4: Using the Flash</h3>
+        <p>Built-in camera flashes flatten everything and create hard white hotspots. They make bread look plastic and ceramics look like they're made of glaze and nothing else. No professional product photo has been taken with a flash sitting two inches from the lens.</p>
+        <p>Fix: Turn off the flash. Use natural light from a window as your primary light source. If you're serious about improving, a simple reflector (a piece of white cardboard works) on the opposite side of the window fills shadows without creating new ones.</p>
+
+        <h3>Mistake 5: One Photo Only</h3>
+        <p>You've taken a beautiful shot of your hand-thrown pottery bowl and you put it on your product page as the only image. A buyer who clicks on it sees one angle. They have to guess what the inside looks like, what the base looks like, how deep it is.</p>
+        <p>Fix: Minimum three photos per product. Front, side, detail shot. For ceramics: show the rim, show it next to something for scale, show the base with any maker's mark. For baked goods: show the crumb (interior structure) for bread, show cross-sections for cakes, show the product in context on a table.</p>
+
+        <h3>Mistake 6: Inconsistent Framing</h3>
+        <p>Your first three products are shot on a white background. Your next four are on a wooden surface. Your last two are on your kitchen counter. This inconsistency trains buyers to feel like they're browsing a car boot sale rather than a coherent brand.</p>
+        <p>Fix: Pick two or three setups and use them consistently. One for detail shots (close, product only, clean background), one for context shots (product in use, lifestyle feel). Keep the background and angle language the same across your entire product range.</p>
+
+        <h3>The Quick Audit</h3>
+        <p>Go to your product page right now. Count the photos. Check the backgrounds. Ask someone who's never bought from you to look at the first image for two seconds and tell you: what is this, what does it cost, how big is it. If they can't answer all three, your photos are costing you sales.</p>
+        <hr>
+        <p><em>Better photos mean more sales. If you'd rather spend your time making than editing, ContentForge can help you build a content workflow that keeps your product visuals consistent and professional — without a photography degree.</em></p>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Article 3 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Case Study</div>
+        <h2>How One Baker Went from Farmers Market to Full-Time Online Orders in 8 Months</h2>
+        <p class="article-excerpt">A step-by-step case study of how a UK baker replaced her market stall income entirely with online orders — the platforms, pricing, and marketing moves that made it happen.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Case Study</span>
+          <span class="meta-chip">E-commerce</span>
+          <span class="meta-chip">~800 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Sarah Marsh had been selling sourdough at her local farmers market in Bath for three years. Good bread, loyal customers, a stall that felt alive on Saturday mornings. But after her second child, the 5am starts stopped adding up. She needed something different.</p>
+        <p>Eight months later, she was turning away custom three days a week and had quit the market entirely. Here's exactly how she did it.</p>
+
+        <h3>The Starting Point</h3>
+        <p>Sarah had roughly 200 customers on a WhatsApp list she'd built manually over two years. She'd been pricing her loaves at £7 each — market rate, maybe slightly premium — and selling 30–40 most Saturdays. That was roughly £1,000 a month in market revenue, not counting the cost of her stall, fuel, and the hours she wasn't paid for.</p>
+        <p>She didn't have a website. She didn't have a social media presence worth talking about. What she did have: a product people asked about at the market, and a list of people who'd already said "I wish I could buy this during the week."</p>
+
+        <h3>Step 1: Pick One Platform and Commit</h3>
+        <p>Sarah's biggest mistake in month one was trying to be everywhere at once. She opened an Etsy shop, set up an Instagram, tried a Shopify site, and posted in four local Facebook groups. Spreading herself thin meant nothing got traction.</p>
+        <p>In month two, she deleted everything and picked one: <strong>Depop</strong>. Not the obvious choice for bread, but hear her out. She'd noticed her best customers were renters in their twenties and thirties — the same demographic using Depop. The app handled payments, had built-in local discovery, and didn't require her to drive traffic from scratch.</p>
+        <p>Her first week on Depop: 12 orders. Her first month: £1,800 in online sales.</p>
+
+        <h3>Step 2: Price for the Channel, Not the Market</h3>
+        <p>Farmers market pricing doesn't translate directly to online. At a market, customers feel the atmosphere, touch the product, impulse buy. Online, they're making a considered purchase with delivery costs on top.</p>
+        <p>Sarah repriced her loaf bundle strategy. A single sourdough went to £9 (covering production cost + a small margin). A "weekly bake box" — four loaves, a batch focaccia, and a tray of sourdough crackers — went to £32 with free local delivery. She offered a 10% discount on subscription orders (weekly or fortnightly) to create loyalty.</p>
+        <p>Her cheapest product covered her time at roughly £18/hour. Her margins on the boxes sat at 38%.</p>
+
+        <h3>Step 3: Turn Existing Customers Into Repeats</h3>
+        <p>She sent a single message to her WhatsApp list: "I'm going online-only. If you want to order during the week, here's the link." She didn't make it a big deal. She just made it easy.</p>
+        <p>Within a week, 34 people had placed orders. By month three, her subscription base was 28 households ordering fortnightly. She moved to a Google Form linked to a simple Stripe payment button — no website required, no monthly platform fees beyond Stripe's 1.5% cut.</p>
+
+        <h3>Step 4: One New Channel at a Time</h3>
+        <p>After subscriptions were stable, she added <strong>Instagram</strong> in month four. Not to post every day. To post the two things that actually sold: process shots (her hands scoring dough, the oven at 2am) and finished loaves arranged simply on a wooden board. She didn't style them. She shot them quickly, in natural light, on her phone.</p>
+        <p>The first month on Instagram brought 11 new subscription customers. She tracked every referral with a single tracking link.</p>
+
+        <h3>The Numbers at 8 Months</h3>
+        <ul>
+          <li>Monthly revenue: £4,200 average (up from £1,000 at market)</li>
+          <li>Hours worked: 32/week (down from 45+ at the stall)</li>
+          <li>Subscription revenue: £2,100/month (50%)</li>
+          <li>Cost per sale: £0.38 (payment processing only)</li>
+          <li>Customer acquisition: almost entirely word-of-mouth</li>
+        </ul>
+
+        <h3>What She'd Tell Herself at the Start</h3>
+        <p>"Don't try to build a brand before you have repeatable sales. One platform, one clear offer, and a way to take payment. Everything else is a distraction."</p>
+        <hr>
+        <p><em>Ready to move your craft business online but not sure where to start? ContentForge helps artisans and makers build the content strategy and online presence that actually converts — without spending hours on social media every day.</em></p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><a href="index.html">ContentForge Portfolio</a> — Content that actually works for SMBs</p>
+  </div>
+</footer>
+
+</body>
+</html>

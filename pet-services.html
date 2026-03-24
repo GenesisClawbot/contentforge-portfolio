@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Services Content — ContentForge Portfolio</title>
+  <meta name="description" content="Real content samples for pet service businesses: dog walkers, groomers, and pet care pros. Written by ContentForge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f11; --surface: #151820; --surface2: #1c2029; --border: #252a36;
+      --text: #e8eaf0; --text-muted: #8892a4;
+      --accent: #f5a623; --accent-dim: rgba(245,166,35,0.12);
+      --pet: #3ec9a7; --pet-dim: rgba(62,201,167,0.12);
+      --radius: 12px; --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 28px 0; border-bottom: 1px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+    .logo span { color: var(--accent); }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--text-muted); font-size: 15px; font-weight: 500; transition: color 0.15s; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .page-hero { padding: 80px 0 60px; }
+    .page-hero .niche-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--pet-dim); color: var(--pet);
+      font-family: var(--mono); font-size: 13px; font-weight: 500;
+      padding: 8px 16px; border-radius: 20px; margin-bottom: 20px;
+    }
+    .page-hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 20px; }
+    .page-hero p { font-size: 18px; color: var(--text-muted); max-width: 560px; line-height: 1.6; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 60px 0; }
+
+    .article { margin-bottom: 80px; }
+    .article-header { margin-bottom: 32px; }
+    .article-tag { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--pet); margin-bottom: 12px; }
+    .article h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 16px; }
+    .article-excerpt { font-size: 18px; color: var(--text-muted); line-height: 1.65; border-left: 3px solid var(--pet); padding-left: 20px; }
+    .article-meta { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+    .meta-chip { font-family: var(--mono); font-size: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; }
+
+    .article-body { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px; }
+    .article-body p { color: #c4c9d6; margin-bottom: 20px; font-size: 17px; }
+    .article-body h3 { font-size: 18px; font-weight: 600; color: var(--text); margin-top: 36px; margin-bottom: 14px; }
+    .article-body h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-top: 40px; margin-bottom: 16px; }
+    .article-body ul, .article-body ol { color: #c4c9d6; margin-bottom: 20px; padding-left: 28px; font-size: 17px; }
+    .article-body li { margin-bottom: 10px; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body blockquote { border-left: 3px solid var(--pet); padding: 14px 22px; margin: 24px 0; background: var(--pet-dim); border-radius: 0 8px 8px 0; font-style: italic; color: var(--text); }
+    .article-body hr { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+    .article-body em { font-style: italic; color: var(--text); }
+    .article-body a { color: var(--accent); }
+    .article-body a:hover { text-decoration: underline; }
+    .article-body ol { list-style: none; padding-left: 0; }
+    .article-body ol li { counter-increment: step; position: relative; padding-left: 36px; }
+    .article-body ol li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: var(--pet-dim); color: var(--pet); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; font-family: var(--mono); }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { position: relative; padding-left: 32px; margin-bottom: 12px; color: #c4c9d6; font-size: 17px; }
+    .checklist li::before { content: ''; position: absolute; left: 0; top: 8px; width: 16px; height: 16px; border: 2px solid var(--pet); border-radius: 4px; background: var(--pet-dim); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 80px; }
+
+    @media (max-width: 640px) {
+      nav { gap: 16px; }
+      nav a { font-size: 14px; }
+      .page-hero { padding: 50px 0 40px; }
+      .article-body { padding: 28px 24px; }
+      .checklist li { padding-left: 28px; }
+    }
+    @media (max-width: 400px) { nav { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">Content<span>Forge</span></div>
+    <nav>
+      <a href="index.html">All Niches</a>
+      <a href="wedding-vendors.html">Wedding</a>
+      <a href="artisans.html">Artisans</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="niche-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Pet Services
+      </div>
+      <h1>Content for Pet Service Businesses</h1>
+      <p>Real blog posts, email sequences, and guides written for dog walkers, groomers, and pet care professionals. The kind of content that gets found on Google and shares itself.</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Article 1 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>Seasonal Dog Walking: 5 Ways to Keep Clients All Year Round</h2>
+        <p class="article-excerpt">Dog walking slows down in summer and stops in December for most services. Here's how to keep revenue steady when the seasons change.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Dog Walking</span>
+          <span class="meta-chip">Seasonal Revenue</span>
+          <span class="meta-chip">~900 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Most dog walkers see the same pattern every year: summer hits and clients cancel because they're working from home and walking dogs themselves. December rolls around and it's dead for two weeks. Then January gets weird. Revenue swings like this are manageable if you plan for them.</p>
+        <p>Here are five things that actually work.</p>
+
+        <h3>1. Summer Heat Route Packages</h3>
+        <p>When temperatures spike above 25C, dog owners feel guilty sending their dog out with a walker. Offer a <strong>summer heat package</strong>: shorter walks (30 minutes instead of 60), twice daily check-ins, midday routes that stay on grass and shade, and a water/hydration add-on. Price it at a slight premium per walk but offer a discount if they commit to a monthly block. You're adding value, not discounting — and you're giving anxious owners a reason to keep the service.</p>
+
+        <h3>2. Winter Bundle Deals</h3>
+        <p>November through February is when most walkers lose clients. Flip it. Offer a <strong>Winter Walking Bundle</strong>: buy 10 walks, get 2 free, or offer a 15% discount on a 3-month commitment starting in November. The key is locking in the commitment before the slow season hits. Send the offer in October with a clear expiry date. People respond to urgency and value.</p>
+
+        <h3>3. Holiday Packages (That Actually Make Sense)</h3>
+        <p>The two weeks between Christmas and New Year are genuinely hard for everyone. Instead of just raising prices (which feels extractive), build a <strong>Holiday Comfort Package</strong>: priority booking for your existing clients, a photo card of their dog delivered on Christmas Eve, and a 10% discount on any referrals they send your way. It costs you a few pounds in printing and time, but it builds loyalty that carries into January.</p>
+
+        <h3>4. Back-to-School Momentum Push</h3>
+        <p>September is one of the best months for dog walking signups. Families get back into routines. Parents realise their "I'll walk the dog while working from home" experiment lasted about three weeks. Have a <strong>Back-to-Routine</strong> promotion ready: first week free with a 4-week commitment, or a waiver on the registration fee. This is the easiest time to convert enquiries into clients because the timing is on your side.</p>
+
+        <h3>5. Rain and Indoor Enrichment Add-On</h3>
+        <p>You can't control the weather, but you can offer an <strong>indoor enrichment upgrade</strong> for rainy days: puzzle feeders, sniff mats, a short indoor session with camera updates. Some clients will pay extra for this rather than cancel entirely. It keeps revenue flowing on days that would otherwise be cancellations, and it shows a level of service your competitors aren't offering.</p>
+
+        <h3>The Real Point</h3>
+        <p>Seasonal slumps aren't inevitable. They're predictable. Build your offers before the slow period, communicate clearly with clients before they make the decision to cancel, and always — always — give them a reason to stay rather than a generic discount. Value beats price every time.</p>
+        <hr>
+        <p><em>ContentForge helps pet service businesses build content strategies that fill their calendars year-round.</em></p>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Article 2 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>Why Every Dog Walker Needs a Google Business Profile (And How to Fix Yours in 20 Minutes)</h2>
+        <p class="article-excerpt">Most dog walkers ignore their Google Business Profile. That's a mistake. Here's how to fix yours and actually get found by local pet owners.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Local SEO</span>
+          <span class="meta-chip">Google Business</span>
+          <span class="meta-chip">~750 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Your Google Business Profile is the most powerful free marketing tool you have. Most dog walkers either don't have one set up properly, or they set it up once and forget about it. That costs you clients every single day.</p>
+        <p>Here's the thing: when someone types "dog walker near me" or "dog walking [your city]" into Google, your Business Profile is what decides whether they find you or your competitor. Not your website. Not your Instagram. Your Business Profile.</p>
+
+        <h3>Why It Matters More Than Your Website</h3>
+        <p>Google displays the map pack — those three business listings with a map — above organic search results for local queries. That means even if your website ranks on page two, you can still show up front and center in the map pack if your Business Profile is optimised.</p>
+        <p>For dog walking, which is a hyper-local service, this is everything. A pet owner in your neighbourhood is searching for convenience and trust. Your Business Profile gives them your hours, your phone number, your reviews, and a link to message you — all in one place. No friction.</p>
+
+        <h3>What Actually Goes Wrong</h3>
+        <p>Most dog walking profiles fail at the basics:</p>
+        <ul>
+          <li><strong>Incomplete information</strong> — missing service areas, no website link, vague business hours</li>
+          <li><strong>No photos</strong> — Google shows a blank profile picture and it looks like a fake listing</li>
+          <li><strong>Zero reviews or bad review responses</strong> — or worse, never responding at all</li>
+          <li><strong>Keyword stuffing in the business name</strong> — "Sarah's Dog Walking Services Portland" gets penalised, not rewarded</li>
+          <li><strong>No posts</strong> — Google Business Profiles support regular posts and most profiles sit completely dormant</li>
+        </ul>
+
+        <h3>The 20-Minute Fix</h3>
+        <p>Go to business.google.com and work through this in order:</p>
+        <ol>
+          <li><strong>Claim and verify your listing.</strong> If it's unclaimed, claim it now.</li>
+          <li><strong>Fill in every single field.</strong> Business name (use your actual business name, no keywords), category ("Dog Walker" as your primary category), service area, hours, phone number, website, and a complete business description.</li>
+          <li><strong>Upload 5–10 photos right now.</strong> Your van or car, you on a walk with a dog, a happy client. Real photos, not logos. Profiles with photos get significantly more clicks.</li>
+          <li><strong>Set your service attributes.</strong> Mark if you offer small dog walks, large dog walks, puppy walks, boarding, etc.</li>
+          <li><strong>Post your first update.</strong> A simple "January walks available! Message me to book." Google rewards profiles that are active.</li>
+          <li><strong>Ask your best clients for reviews.</strong> Send them a direct link to your review page. Make it one click.</li>
+        </ol>
+
+        <h3>Quick Audit Checklist</h3>
+        <ul class="checklist">
+          <li>Listing is claimed and verified</li>
+          <li>Business name matches exactly what's on your signage/vehicle</li>
+          <li>Primary category set to "Dog Walker"</li>
+          <li>Service area covers every neighbourhood you serve</li>
+          <li>Phone number is correct and clickable on mobile</li>
+          <li>At least 5 photos uploaded (not stock images)</li>
+          <li>Profile photo is your actual logo or a clear, professional image</li>
+          <li>Business description includes your city/neighbourhood naturally</li>
+          <li>Operating hours are accurate, including holiday hours</li>
+          <li>At least 3 recent Google posts</li>
+          <li>You've responded to every review (even the old ones)</li>
+          <li>Review link is short and shareable</li>
+        </ul>
+        <p>If you go through this list and find gaps, fix them. An hour of work on your Business Profile can bring in clients for months or years. It's the highest-ROI task in your business that almost nobody does.</p>
+        <hr>
+        <p><em>Need help turning these blog posts into a content machine for your pet service business? ContentForge helps pet service pros plan, write, and publish content that actually books clients.</em></p>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Article 3 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>What 200 Client Reviews Taught One Pet Groomer About Getting More 5-Star Reviews</h2>
+        <p class="article-excerpt">One pet groomer tracked every review for two years. Here's what actually moves the needle — and what wastes your time.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Reviews</span>
+          <span class="meta-chip">Pet Grooming</span>
+          <span class="meta-chip">~850 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Priya has been grooming dogs in Leeds for eight years. She started in a salon, went independent in 2020, and now works solo three days a week out of a converted garage at her home. She's got a 4.8 star rating on Google with over two hundred reviews.</p>
+        <p>But it wasn't always that way.</p>
+        <p>"I had maybe eight reviews after my first year," she says. "And two of them were three stars. Not bad, but not great. I knew I was doing good work. I just didn't know how to communicate that in a way that got people to say so publicly."</p>
+        <p>What changed wasn't some clever review-generation scheme. It was understanding why people leave reviews in the first place — and what that has to do with the experience you actually deliver.</p>
+
+        <h3>The Real Reason People Don't Leave Reviews</h3>
+        <p>Most businesses assume people don't leave reviews because they're lazy or forgetful. That's partly true. But the bigger reason is simpler: they don't feel prompted at the right moment, in the right way.</p>
+        <p>The moment immediately after a service is when satisfaction is highest. That's the window. If you don't ask in that window, the chance drops fast. A week later, when you send an email, you're competing with everything else in their inbox.</p>
+
+        <h3>What 200 Reviews Taught Her</h3>
+        <p><strong>Ask in person, every time, without apology.</strong> After every groom, Priya tells clients: "I'm always trying to improve — if you had a great experience, a Google review really helps me grow. It takes thirty seconds and I'd really appreciate it." She says it warmly and matter-of-factly. About 40% of people who hear this actually leave a review.</p>
+        <p><strong>Make the "easy review" path frictionless.</strong> She created a QR code that goes straight to her Google review page. It's on her appointment card, on her wallet card, and on the thank-you message she sends after every appointment. She estimates this alone doubled her review rate.</p>
+        <p><strong>Respond to every single one.</strong> Good or bad or indifferent, she responds. A "Thank you so much, made my day!" on a five-star. A "I'm sorry Max was anxious, here's what I do differently next time" on a three-star. Google rewards businesses that respond. More importantly, people read the responses. A thoughtful response on a negative review shows potential clients that she cares.</p>
+        <p><strong>Under-promise and over-deliver, specifically.</strong> She tells clients the groom takes 90 minutes even when she knows it'll be done in 60. When it's ready early, she texts: "All done, Buddy looks great, happy to hand over whenever works for you." That gap — between what was expected and what was delivered — creates genuine delight. People leave five stars because they're surprised and pleased, not just satisfied.</p>
+        <p><strong>Do one unexpected thing per visit.</strong> Sometimes it's a little bow in the dog's fur. Sometimes it's a freshly washed bandana. Sometimes it's a tip card about the dog's coat condition. It doesn't cost much but it gives people something to mention in a review beyond "good groom."</p>
+
+        <h3>The Numbers</h3>
+        <p>After implementing all five of these, her average monthly reviews went from fewer than two to more than seven. Her rating climbed from 4.4 to 4.8 over eighteen months. She gets more enquiries now than she can handle, and she hasn't spent a penny on advertising.</p>
+        <p>"Reviews are word of mouth, but for people who've never met me," she says. "You can't fake the aggregate. Two hundred real reviews from real clients is more persuasive than any website I could build."</p>
+
+        <h3>What You Can Start Today</h3>
+        <p>You don't need to overhaul your whole business. Start with the QR code and the in-person ask. Those two things alone will change your review rate within a month.</p>
+        <p>And respond to everything. Every single one.</p>
+        <hr>
+        <p><em>Getting more reviews is just one part of building a business that books itself. ContentForge helps pet service businesses create the online presence that turns happy clients into your best marketing channel.</em></p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><a href="index.html">ContentForge Portfolio</a> — Content that actually works for SMBs</p>
+  </div>
+</footer>
+
+</body>
+</html>

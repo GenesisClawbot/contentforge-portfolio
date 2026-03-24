@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Vendors Content — ContentForge Portfolio</title>
+  <meta name="description" content="Real content samples for wedding vendors: photographers, florists, planners. Written by ContentForge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f11; --surface: #151820; --surface2: #1c2029; --border: #252a36;
+      --text: #e8eaf0; --text-muted: #8892a4;
+      --accent: #f5a623; --accent-dim: rgba(245,166,35,0.12);
+      --wedding: #e87f9f; --wedding-dim: rgba(232,127,159,0.12);
+      --radius: 12px; --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 28px 0; border-bottom: 1px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+    .logo span { color: var(--accent); }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--text-muted); font-size: 15px; font-weight: 500; transition: color 0.15s; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .page-hero { padding: 80px 0 60px; }
+    .page-hero .niche-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--wedding-dim); color: var(--wedding);
+      font-family: var(--mono); font-size: 13px; font-weight: 500;
+      padding: 8px 16px; border-radius: 20px; margin-bottom: 20px;
+    }
+    .page-hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 20px; }
+    .page-hero p { font-size: 18px; color: var(--text-muted); max-width: 560px; line-height: 1.6; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 60px 0; }
+
+    .article { margin-bottom: 80px; }
+    .article-header { margin-bottom: 32px; }
+    .article-tag { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--wedding); margin-bottom: 12px; }
+    .article h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 16px; }
+    .article-excerpt { font-size: 18px; color: var(--text-muted); line-height: 1.65; border-left: 3px solid var(--wedding); padding-left: 20px; }
+    .article-meta { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+    .meta-chip { font-family: var(--mono); font-size: 12px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; }
+
+    .article-body { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px; }
+    .article-body p { color: #c4c9d6; margin-bottom: 20px; font-size: 17px; }
+    .article-body h3 { font-size: 18px; font-weight: 600; color: var(--text); margin-top: 36px; margin-bottom: 14px; }
+    .article-body h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-top: 40px; margin-bottom: 16px; }
+    .article-body ul, .article-body ol { color: #c4c9d6; margin-bottom: 20px; padding-left: 28px; font-size: 17px; }
+    .article-body li { margin-bottom: 10px; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body blockquote {
+      border-left: 3px solid var(--wedding); padding: 16px 24px;
+      margin: 24px 0; background: var(--wedding-dim); border-radius: 0 8px 8px 0;
+      font-style: italic; color: var(--text); line-height: 1.7;
+    }
+    .article-body blockquote strong { font-style: normal; display: block; margin-bottom: 8px; }
+    .article-body hr { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+    .article-body em { font-style: italic; color: var(--text); }
+    .article-body a { color: var(--accent); }
+    .article-body a:hover { text-decoration: underline; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 80px; }
+
+    @media (max-width: 640px) {
+      nav { gap: 16px; }
+      nav a { font-size: 14px; }
+      .page-hero { padding: 50px 0 40px; }
+      .article-body { padding: 28px 24px; }
+    }
+    @media (max-width: 400px) { nav { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">Content<span>Forge</span></div>
+    <nav>
+      <a href="index.html">All Niches</a>
+      <a href="pet-services.html">Pet Services</a>
+      <a href="artisans.html">Artisans</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="niche-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Wedding Vendors
+      </div>
+      <h1>Content for Wedding Vendors</h1>
+      <p>Blog posts, email templates, and PR guides for photographers, florists, planners, and caterers. The kind of content that books more weddings.</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Article 1 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>Local Wedding Vendors: How to Get Featured in Bridal Magazines and Blogs</h2>
+        <p class="article-excerpt">Most wedding vendors assume getting featured in bridal magazines or blogs requires knowing someone, paying someone, or having a glamorous portfolio. None of that is true.</p>
+        <div class="article-meta">
+          <span class="meta-chip">PR</span>
+          <span class="meta-chip">Bridal Media</span>
+          <span class="meta-chip">~750 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Most wedding vendors assume getting featured in bridal magazines or blogs requires knowing someone, paying someone, or having a portfolio glamorous enough to land on its own. None of that is true.</p>
+        <p>PR for wedding vendors is approachable, inexpensive, and actually not that complicated once you understand what editors are looking for.</p>
+
+        <h3>What Editors Actually Want</h3>
+        <p>Bridal magazine and blog editors have the same problem you do: they need a constant supply of fresh, real content. Real weddings with real details. Vendors they can recommend with confidence. Local stories that resonate with their specific readership.</p>
+        <p>They're not looking for perfection. They're looking for good material that fits their editorial calendar.</p>
+        <p>A winter wedding in Manchester with a florist who did something interesting with seasonal foliage? That's a pitch. A planner who pulled off a destination wedding on a tight budget? That's a pitch. An intimate elopement in the Scottish Highlands? That's definitely a pitch.</p>
+
+        <h3>How to Pitch</h3>
+        <p>Don't send a generic email that says "would you like to feature our work?" Instead:</p>
+        <ol>
+          <li><strong>Identify the story.</strong> What makes this wedding or this vendor worth reading about? The couple's story, a specific design choice, an unusual venue, a cultural tradition — find the angle.</li>
+          <li><strong>Include images.</strong> Always. Low-res is fine for the initial email. Make sure they're good. One mediocre image kills a great pitch.</li>
+          <li><strong>Keep it short.</strong> Three or four paragraphs. Who, what, when, where, and why it's interesting. That's it.</li>
+        </ol>
+
+        <blockquote>
+          <strong>Subject:</strong> Real Wedding: Autumn ceremony at [Venue], [City]<br><br>
+          Hi [Editor Name],<br><br>
+          I worked with [couple name] on their wedding at [Venue] last October. What stood out about this one was [specific angle — e.g., they sourced all their florals from a local flower farm, the bride wore her grandmother's dress, they did the whole day for under £15k].<br><br>
+          I've attached a few images and happy to share the full gallery if you're interested.<br><br>
+          Best,<br>
+          [Your name and business name]
+        </blockquote>
+
+        <h3>Local SEO for Wedding Blogs</h3>
+        <p>Getting featured on bridal blogs is also an SEO play. When a local wedding blog links to your site, search engines see that as a signal of authority and relevance. Here's how to make the most of it:</p>
+        <ul>
+          <li><strong>Claim your listing</strong> on major UK wedding directories: Hitched, Bridebook, The Wedding Society. Fill them out completely — photos, description, reviews.</li>
+          <li><strong>Target local search terms</strong> on your own site: "wedding florist Bristol," "wedding photographer Cotswolds." Write blog posts around these phrases.</li>
+          <li><strong>Get mentioned in local press.</strong> Even a small local magazine or blog counts. Ask clients to share their wedding on social and tag you.</li>
+        </ul>
+
+        <h3>How to Find Opportunities</h3>
+        <p>Search "[your city] wedding blog" and "[your region] bridal magazine" and make a list of 10–15. Visit their website and look for "submit a wedding" or "work with us" pages. Follow them on social media to understand what they post and when.</p>
+        <p>You don't need a big budget. You need consistency. Pitch five real stories a year. One will land. That one feature turns into credibility, a back-link, and potentially three new enquiries.</p>
+        <hr>
+        <p><em>Building your vendor business takes more than a great portfolio. ContentForge helps wedding professionals market smarter — from pitch templates to SEO guides.</em></p>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Article 2 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>The Booking Inquiry Email That Actually Gets a Response (With Real Examples)</h2>
+        <p class="article-excerpt">Stop sending generic inquiry emails into the void. Here's how to write messages that get real responses from potential wedding clients.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Inquiry Emails</span>
+          <span class="meta-chip">Booking</span>
+          <span class="meta-chip">~900 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Most inquiry emails wedding vendors receive are forgettable. They say the right things but land with no impact. "Hi, we're getting married next year and would love to chat." That's it. No personality, no substance, no reason to reply.</p>
+        <p>If you're a wedding vendor and your inquiry emails look like that, you're losing bookings before the conversation starts. Same if you're sending them.</p>
+
+        <h3>Why Most Inquiry Emails Fail</h3>
+        <p>Couples send dozens of inquiries. They're tired, overwhelmed, and comparing five vendors at once. Your email needs to stand out in under 10 seconds of reading. Generic intros, no mention of their date or venue, and zero personalisation are the fastest ways to get ignored.</p>
+        <p>The goal isn't to sell. It's to start a conversation.</p>
+
+        <h3>Template 1: The Warm Intro (Best for Photographers and Videographers)</h3>
+        <blockquote>
+          <strong>Subject:</strong> Inquiry about [Date] at [Venue] — [Your Names]<br><br>
+          Hi [Vendor Name],<br><br>
+          We're [Name] and [Name], getting married on [Date] at [Venue or City]. We've been looking through your portfolio and love [specific thing you noticed — e.g., the way you capture golden hour, your documentary style].<br><br>
+          Our budget is around [£X], and we're hoping you have availability. Would love to know more about your approach and what's included in your packages.<br><br>
+          Thanks so much,<br>
+          [Names]
+        </blockquote>
+        <p><strong>Why this works:</strong> It shows you did the research. Mentioning something specific about their work proves you're not copy-pasting. Listing your date and budget upfront saves everyone time.</p>
+
+        <h3>Template 2: The Personal Touch (Best for Florists and Planners)</h3>
+        <blockquote>
+          <strong>Subject:</strong> [Venue Name] wedding — flora/coordination inquiry<br><br>
+          Hi [Name],<br><br>
+          We got engaged last month and are already deep in planning. Our venue is [Venue], and we're drawn to your style — particularly [specific example from their work, e.g., your wild garden arrangements].<br><br>
+          We're after something that feels [relaxed/elegant/romantic] and our budget for florals/coordination is roughly [£X]. Our date is [Date].<br><br>
+          Would you have time for a call or a Zoom in the next few weeks?<br><br>
+          Best,<br>
+          [Name]
+        </blockquote>
+        <p><strong>Why this works:</strong> Flatters genuinely. References their actual work. Gives the vendor exactly what they need to respond — date, budget, vibe. Asking for a call signals you're serious.</p>
+
+        <h3>Template 3: The Confident Ask (Best for High-End or Destination Vendors)</h3>
+        <blockquote>
+          <strong>Subject:</strong> [Couple Name] — [Date] wedding at [Venue], inquiry<br><br>
+          Hi [Vendor],<br><br>
+          We're getting married at [Venue] on [Date] and are currently shortlisting [photographers/florists/planners]. Your work keeps standing out — particularly [specific project or style note].<br><br>
+          We have a budget of [£X] and are looking for someone who [specific quality — e.g., can handle a 200-guest reception, has experience at this venue].<br><br>
+          Are you available and would you be open to a quick call this week?<br><br>
+          Cheers,<br>
+          [Name and partner name]
+        </blockquote>
+        <p><strong>Why this works:</strong> Confident without being demanding. Gives context, budget, and a clear call to action. High-end clients respond to vendors who ask directly rather than hedge.</p>
+
+        <h3>The Three Things Every Inquiry Email Needs</h3>
+        <ol>
+          <li><strong>Your date and venue</strong> — vendors filter by availability first. Give this upfront.</li>
+          <li><strong>Something specific about their work</strong> — shows you actually looked.</li>
+          <li><strong>A budget range</strong> — saves time for everyone and signals you're serious.</li>
+        </ol>
+        <p>If you're a wedding vendor and your inquiries aren't converting, look at what you're sending back, not just what you're receiving. Sometimes the problem is the reply, not the lead.</p>
+        <hr>
+        <p><em>Need help turning inquiry emails into booked weddings? ContentForge has templates and workflows built for wedding vendors at every stage of the client journey.</em></p>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Article 3 -->
+    <article class="article">
+      <div class="article-header">
+        <div class="article-tag">Blog Post</div>
+        <h2>What Wedding Photographers Get Wrong About Their Online Presence</h2>
+        <p class="article-excerpt">The carousel of 40 similar photos, the missing pricing page, the bio that says nothing. Here's what wedding photographers get wrong — and how to fix it.</p>
+        <div class="article-meta">
+          <span class="meta-chip">Photography Business</span>
+          <span class="meta-chip">Website</span>
+          <span class="meta-chip">~700 words</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <p>Most wedding photographer websites fail on the basics. Not because the photographers can't shoot — their work is often genuinely excellent. But the website doesn't know how to sell it.</p>
+        <p>If you're a wedding photographer and you're not getting inquiry emails, your website is probably the problem. Here's what I see most.</p>
+
+        <h3>Mistake 1: The Carousel of 40 Similar Photos</h3>
+        <p>You've seen them. A portfolio page that scrolls forever through images that are virtually identical. Same lighting, same poses, same couple in different corners of the same field. One great image does more than forty mediocre ones.</p>
+        <p><strong>The fix:</strong> Pick 15–20 of your absolute best images. They should show variety — different venues, different seasons, different couples. Make the viewer feel something. Quality over quantity isn't a cliché, it's conversion strategy.</p>
+
+        <h3>Mistake 2: No Pricing Page</h3>
+        <p>Not having a pricing page doesn't filter out budget clients. It just means they email you to ask, you email back, and then they realise you're out of their range and you've wasted both people's time. Meanwhile, couples with real budgets have already moved on to someone who was transparent.</p>
+        <p><strong>The fix:</strong> Put pricing ranges on your site. Even a starting price with "custom packages available" is enough. Couples are shopping. Give them something to work with.</p>
+
+        <h3>Mistake 3: The Generic Bio</h3>
+        <p>"I discovered my love for photography at a young age. My goal is to capture authentic moments." This tells me nothing. I've read ten bios like this today.</p>
+        <p><strong>The fix:</strong> Write like a person. Where are you based? What do you love about wedding photography specifically? What will you be like on the wedding day? Are you someone they'll enjoy being around for ten hours? Couples hire photographers they like and trust. Your bio is where they decide if that's you.</p>
+
+        <h3>Mistake 4: No Mobile Optimisation</h3>
+        <p>A huge chunk of your traffic is couples browsing on their phones in bed at 11pm. If your site loads slowly, looks broken on mobile, or has navigation that requires a magnifying glass, they're gone in 30 seconds.</p>
+        <p><strong>The fix:</strong> Test your site on your own phone. Actually use it. If something is annoying to tap, fix it.</p>
+
+        <h3>Mistake 5: Missing the "Why Book With Me" Page</h3>
+        <p>Your portfolio shows what you can do. You need a page that explains why someone should pick you specifically. This is where you talk about your process, your experience at certain venues, your approach to difficult lighting, whatever makes you different.</p>
+        <p><strong>The fix:</strong> Add a page or section called "Experience" or "Why Book With Me." Write it for the couple, not for other photographers.</p>
+
+        <p>The wedding photography market is saturated. But most of your competition has a website, not a sales tool. Fix the basics and you stand out without changing a single photograph.</p>
+        <hr>
+        <p><em>Want help building a website that actually books weddings? ContentForge has guidance for photographers at every stage of their business.</em></p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><a href="index.html">ContentForge Portfolio</a> — Content that actually works for SMBs</p>
+  </div>
+</footer>
+
+</body>
+</html>
